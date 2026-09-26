@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Isla Cocodrilo — Contenido visual, publicidad y Cocodrilo AI.">
+<title>Isla Cocodrilo — Contenido que comunica</title>
+<style>
+:root{--bg:#050505;--panel:#0d0d0d;--text:#f4f4f2;--muted:#aaa;--red:#d00000;--line:#242424;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}.container{width:min(92%,var(--max));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(5,5,5,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.14em;font-size:14px}
+.brand-logo{width:36px;height:36px;border-radius:50%;object-fit:cover;display:block}
+nav{display:flex;gap:25px;align-items:center;font-size:14px;color:#ccc}nav a:hover{color:#fff}.navbtn{border:1px solid var(--red);padding:9px 15px;border-radius:999px;color:#fff;transition:background .2s}.navbtn:hover{background:var(--red)}
+.hero{min-height:84vh;display:flex;align-items:center;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:600px;height:600px;border-radius:50%;right:-230px;top:-220px;background:radial-gradient(circle,rgba(208,0,0,.16),transparent 68%)}
+.hero-content{padding:95px 0;position:relative;z-index:1}.eyebrow,.kicker{color:var(--red);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.2em}
+h1{font-size:clamp(48px,8vw,94px);line-height:.94;letter-spacing:-.055em;max-width:950px;margin:22px 0}h1 span{color:var(--red)}.hero p{max-width:700px;color:#c5c5c5;font-size:20px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 21px;border-radius:999px;font-weight:800}.primary{background:var(--red)}.secondary{border:1px solid var(--line)}
+section{padding:95px 0;border-top:1px solid var(--line)}.head{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-bottom:45px}.head h2{font-size:clamp(36px,5vw,62px);line-height:1;letter-spacing:-.045em;margin:8px 0}.intro{align-self:end;color:var(--muted);font-size:18px}
+.service{margin-top:72px}.service-title{display:flex;justify-content:space-between;gap:30px;margin-bottom:24px}.service-title h3{font-size:clamp(30px,4vw,48px);line-height:1;letter-spacing:-.04em;margin:8px 0}.service-title p{max-width:520px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(145deg,#111,#090909);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column}.featured{border-color:rgba(208,0,0,.55)}.label{color:var(--red);font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.card h4{font-size:27px;margin:8px 0}.price{font-size:42px;font-weight:850;letter-spacing:-.04em;margin:12px 0 5px}.price small{font-size:14px;color:var(--muted);font-weight:400}.desc{color:var(--muted);min-height:68px}.card ul{list-style:none;padding:0;margin:10px 0 20px;display:grid;gap:10px;color:#ddd}.card li:before{content:"✓";color:var(--red);font-weight:bold;margin-right:8px}.count{border-top:1px solid var(--line);padding-top:16px;margin-top:auto;font-weight:800}
+.spot{display:grid;grid-template-columns:1.1fr .9fr;gap:15px}.spot-main,.note{border:1px solid var(--line);border-radius:24px;padding:38px;background:#0b0b0b}.spot-main{background:radial-gradient(circle at 80% 10%,rgba(208,0,0,.2),transparent 32%),#0b0b0b}.spot-main h3{font-size:clamp(32px,4vw,55px);line-height:1;margin:10px 0 18px}.spot-main p,.note p{color:var(--muted);font-size:17px}.spot-price{font-size:52px;font-weight:850;margin:22px 0}.note{display:flex;flex-direction:column;justify-content:center}.note strong{color:#fff}
+.cta{padding:95px 0}.cta-box{border:1px solid var(--line);border-radius:28px;padding:clamp(35px,7vw,80px);background:linear-gradient(120deg,rgba(208,0,0,.17),transparent 55%),#0c0c0c}.cta h2{font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-.045em;max-width:760px;margin:10px 0}.cta p{max-width:670px;color:var(--muted);font-size:18px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:13px}.foot{display:flex;justify-content:space-between;align-items:center}
+@media(max-width:900px){nav{display:none}.head{grid-template-columns:1fr;gap:18px}.cards,.spot{grid-template-columns:1fr}.service-title{display:block}.service-title p{margin-top:14px}}
+@media(max-width:600px){.hero-content{padding:75px 0}.hero{min-height:auto}section{padding:70px 0}.card{padding:24px}.spot-main,.note{padding:27px}.foot{display:block}.foot div+div{margin-top:8px}}
+</style>
+</head>
+<body>
+
+<!-- HEADER / LOGO ACTUALIZADO -->
+<header><div class="container nav">
+<a class="brand" href="#inicio">
+  <img src="LOGO actual isla cocodrilo.png" alt="Logo Isla Cocodrilo" class="brand-logo">
+  <span>ISLA COCODRILO</span>
+</a>
+<nav>
+  <a href="#contenido">Contenido</a>
+  <a href="#spots">Spots</a>
+  <a href="#ai">Cocodrilo AI</a>
+  <a class="navbtn" href="https://wa.me/5352044651?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer">Hablemos</a>
+</nav>
+</div></header>
+
+<main id="inicio">
+
+<!-- HERO / MENSAJE PRINCIPAL -->
+<section class="hero"><div class="container hero-content">
+<div class="eyebrow">Producción audiovisual · Cuba</div>
+<h1>Contenido que <span>comunica.</span><br>Historias que conectan.</h1>
+<p>Creamos contenido visual y publicidad para negocios y empresas que necesitan comunicar mejor lo que hacen. Trabajamos desde Cuba, de forma online o presencial, combinando producción audiovisual, estrategia, diseño e inteligencia artificial.</p>
+<div class="actions">
+  <a class="btn primary" href="#servicios">Ver servicios</a>
+  <a class="btn secondary" href="https://wa.me/5352044651?text=Hola,%20me%20gustaría%20hablar%20sobre%20un%20proyecto" target="_blank" rel="noopener noreferrer">Hablemos</a>
+</div>
+</div></section>
+
+<section id="servicios"><div class="container">
+<div class="head"><div><div class="kicker">Servicios</div><h2>Lo que podemos crear para tu empresa.</h2></div><p class="intro">Desde contenido mensual hasta piezas publicitarias y producción con inteligencia artificial. Cada servicio responde a una necesidad diferente.</p></div>
+
+<!-- PRESENCIA -->
+<div class="service" id="contenido"><div class="service-title"><div><div class="kicker">01 — Presencia</div><h3>Creación de contenido mensual</h3></div><p>Para negocios y empresas que quieren crear contenido de forma constante sin convertir la producción en una carga.</p></div>
+<div class="cards">
+<article class="card"><div class="label">Presencia</div><h4>Esencial</h4><div class="price">$100 <small>/ mes</small></div><p class="desc">Para negocios que quieren comenzar a crear contenido de forma constante.</p><ul><li>6 Reels</li><li>2 diseños para redes</li><li>2 carruseles</li><li>Guionización</li><li>Edición profesional</li><li>Diseño y adaptación para redes</li></ul><div class="count">10 piezas mensuales</div></article>
+<article class="card featured"><div class="label">Presencia</div><h4>Profesional</h4><div class="price">$150 <small>/ mes</small></div><p class="desc">Para empresas que necesitan una producción de contenido más constante.</p><ul><li>8 Reels</li><li>4 diseños para redes</li><li>3 carruseles</li><li>Guionización</li><li>Edición profesional</li><li>Diseño</li><li>Conceptualización de contenido</li></ul><div class="count">15 piezas mensuales</div></article>
+<article class="card"><div class="label">Presencia</div><h4>Completo</h4><div class="price">$200 <small>/ mes</small></div><p class="desc">Para empresas que quieren convertir el contenido en una parte permanente de su comunicación.</p><ul><li>10 Reels</li><li>6 diseños para redes</li><li>4 carruseles</li><li>2 Reels con AI</li><li>Guionización</li><li>Edición profesional</li><li>Diseño</li><li>Conceptualización</li><li>Dirección creativa</li></ul><div class="count">22 piezas mensuales</div></article>
+</div></div>
+
+<!-- SPOTS -->
+<div class="service" id="spots"><div class="service-title"><div><div class="kicker">02 — Spots publicitarios</div><h3>Una empresa también puede contar historias.</h3></div><p>No hacemos solamente anuncios. Creamos piezas audiovisuales alrededor de una idea, un producto o un servicio para conectar una marca con las personas que quiere alcanzar.</p></div>
+<div class="spot"><article class="spot-main"><div class="label">Spot — Historia</div><h3>Historias pensadas para tu empresa.</h3><p>Cuatro producciones narrativas pensadas para que la empresa forme parte de la historia.</p><div class="spot-price">$500</div><ul style="list-style:none;padding:0;display:grid;gap:10px;color:#ddd"><li>✓ Idea original</li><li>✓ Desarrollo narrativo</li><li>✓ Guion</li><li>✓ Preproducción</li><li>✓ Dirección</li><li>✓ Producción audiovisual</li><li>✓ Locaciones</li><li>✓ Edición profesional</li><li>✓ Color</li><li>✓ Diseño sonoro</li><li>✓ Motion graphics</li><li>✓ Adaptación para redes</li></ul><p><strong>Duración:</strong> hasta 2 minutos.</p></article>
+<aside class="note"><div class="kicker">Producción personalizada</div><p> Cada producción se cotiza de acuerdo con la complejidad de la historia, actores, locaciones y recursos necesarios.</p><p>Si el presupuesto disponible es inferior, adaptamos la idea y la producción para mantener el presupuesto inicial.</p></aside></div></div>
+
+<!-- COCODRILO AI -->
+<div class="service" id="ai"><div class="service-title"><div><div class="kicker">03 — Cocodrilo AI</div><h3>Tu empresa siempre tiene algo que decir.</h3></div><p>Creamos personajes digitales y videos informativos capaces de explicar, educar y mantener activa la comunicación de tu negocio.</p></div>
+<div class="cards">
+<article class="card"><div class="label">Cocodrilo AI</div><h4>Básico</h4><div class="price">$100 <small>/ mes</small></div><p class="desc">Para comenzar a incorporar contenido generado con inteligencia artificial.</p><ul><li>8 videos AI</li><li>Personaje digital consistente</li><li>Guionización</li><li>Edición profesional</li><li>Motion graphics</li><li>Formato vertical para redes</li></ul></article>
+<article class="card featured"><div class="label">Cocodrilo AI</div><h4>Profesional</h4><div class="price">$150 <small>/ mes</small></div><p class="desc">Para empresas que quieren incorporar contenido informativo de manera constante.</p><ul><li>15 videos AI</li><li>Personaje digital consistente</li><li>Guiones personalizados</li><li>Edición profesional</li><li>Motion graphics</li><li>Integración de elementos de marca</li><li>Formato para redes</li></ul></article>
+<article class="card"><div class="label">Cocodrilo AI</div><h4>Continuo</h4><div class="price">$200 <small>/ mes</small></div><p class="desc">Para empresas que quieren utilizar la inteligencia artificial como una herramienta permanente de comunicación.</p><ul><li>20 videos AI</li><li>Personaje digital consistente</li><li>Guiones personalizados</li><li>Contenido informativo y educativo</li><li>Edición profesional</li><li>Motion graphics</li><li>Integración de identidad visual</li><li>Adaptaciones para redes</li></ul></article>
+</div></div>
+</div></section>
+
+<!-- CONTACTO / CTA WHATSAPP -->
+<section class="cta" id="contacto"><div class="container"><div class="cta-box">
+<div class="kicker">Hablemos</div><h2>¿No sabes qué necesita tu empresa?</h2>
+<p>No necesitas elegir un plan antes de hablar con nosotros. Cuéntanos qué hace tu empresa, qué quieres comunicar y qué tipo de contenido necesitas. Te ayudaremos a encontrar la forma más adecuada de producirlo.</p>
+<a class="btn primary" href="https://wa.me/5352044651?text=Hola,%20quiero%20cotizar%20un%20servicio%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer">Hablemos por WhatsApp</a>
+</div></div></section>
+</main>
+
+<footer><div class="container foot"><div><strong>ISLA COCODRILO</strong></div><div>Contenido visual · Publicidad · Cocodrilo AI</div></div></footer>
+</body></html>
