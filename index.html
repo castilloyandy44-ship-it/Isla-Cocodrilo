@@ -2,36 +2,33 @@
 <html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planes Creativos & Producción Audiovisual</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Isla Cocodrilo | Creación de Contenido & Producción</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Phosphor Icons -->
+  <!-- Phosphor Icons for streamlined mobile icons -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <!-- Google Fonts: Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Arial', 'Helvetica', 'sans-serif'],
           },
           colors: {
             brand: {
-              carbon: '#0c0f14',
-              surface: '#131821',
-              card: '#18202c',
-              border: '#242f40',
-              amber: '#f59e0b',
-              gold: '#fbbf24',
-              emerald: '#10b981',
-              coral: '#f43f5e'
+              black: '#050505',
+              bgDark: '#0a0a0a',
+              card: '#121212',
+              cardHover: '#181818',
+              borderDark: '#260a0c',
+              borderLight: '#3d0d10',
+              red: '#b50000',
+              brightRed: '#dc2626',
+              darkRed: '#7f0000',
+              glow: 'rgba(181, 0, 0, 0.4)'
             }
           }
         }
@@ -40,397 +37,390 @@
   </script>
 
   <style>
-    /* Custom styling for glassmorphism and subtle glow */
-    .glass-card {
-      background: rgba(24, 32, 44, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Strict font-family and optimal mobile line-height settings */
+    html, body {
+      font-family: Arial, Helvetica, sans-serif !important;
+      line-height: 1.6;
+      background-color: #050505;
+      color: #ffffff;
+      -webkit-tap-highlight-color: transparent;
+      overflow-x: hidden;
     }
-    .badge-cuban {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(244, 63, 94, 0.2));
-      border: 1px solid rgba(245, 158, 11, 0.4);
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: Arial, Helvetica, sans-serif !important;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
     }
-    .badge-ai {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
-      border: 1px solid rgba(16, 185, 129, 0.4);
+
+    /* Red neon accents and custom borders */
+    .red-glow-card {
+      box-shadow: 0 0 25px -4px rgba(181, 0, 0, 0.35);
     }
-    .badge-prod {
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.2));
-      border: 1px solid rgba(99, 102, 241, 0.4);
+
+    .red-glow-button {
+      box-shadow: 0 4px 18px 0 rgba(220, 38, 38, 0.45);
     }
-    /* Hide scrollbars for pill navigation */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
+
+    .border-red-accent {
+      border: 1px solid rgba(181, 0, 0, 0.38);
     }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+
+    .border-red-featured {
+      border: 2px solid #dc2626;
+    }
+
+    .gradient-card {
+      background: linear-gradient(180deg, #121212 0%, #0a0a0a 100%);
+    }
+
+    .gradient-hero-badge {
+      background: linear-gradient(90deg, rgba(181,0,0,0.2) 0%, rgba(127,0,0,0.3) 100%);
+      border: 1px solid rgba(220,38,38,0.5);
     }
   </style>
 </head>
+<body class="min-h-screen selection:bg-[#b50000] selection:text-white pb-28">
 
-<body class="bg-brand-carbon text-slate-100 font-sans antialiased selection:bg-brand-amber selection:text-black min-h-screen pb-28">
-
-  <header class="sticky top-0 z-40 bg-brand-carbon/90 backdrop-blur-md border-b border-brand-border/60">
-    <div class="max-w-md mx-auto px-4 h-14 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-amber to-brand-coral flex items-center justify-center font-black text-black text-base shadow-lg shadow-amber-500/20">
-          ⚡
+  <header class="sticky top-0 z-50 bg-[#050505]/95 backdrop-blur-md border-b border-[#260a0c]">
+    <div class="max-w-md mx-auto px-4 h-16 flex items-center justify-between">
+      <!-- Logo brand link with official image -->
+      <a href="#" class="flex items-center gap-3 active:opacity-85 transition">
+        <img 
+          src="https://res.cloudinary.com/ejcymysf/image/upload/f_auto,q_auto/LOGO_actual_isla_cocodrilo" 
+          alt="Logo Isla Cocodrilo" 
+          class="w-10 h-10 object-contain rounded-full shadow-[0_0_12px_rgba(181,0,0,0.5)]"
+          onerror="this.src='https://placehold.co/80x80/000000/b50000?text=IC'"
+        />
+        <div class="flex flex-col">
+          <span class="text-sm font-bold uppercase tracking-wider text-white leading-tight">Isla Cocodrilo</span>
+          <span class="text-[10px] text-red-400 font-semibold tracking-wide leading-tight">Contenido & Audiovisual</span>
         </div>
-        <span class="font-extrabold tracking-tight text-white text-base">CROMATIK<span class="text-brand-amber">.</span></span>
-      </div>
-      <a href="#planes" class="text-xs font-semibold px-3 py-1.5 rounded-full bg-brand-card border border-brand-border text-slate-200 hover:text-brand-amber transition">
-        Ver 3 Planes
+      </a>
+
+      <!-- Direct action CTA -->
+      <a href="#cotizador" class="text-xs font-bold px-3 py-1.5 rounded-lg bg-[#b50000] text-white active:scale-95 transition flex items-center gap-1.5 shadow-[0_0_10px_rgba(181,0,0,0.4)]">
+        <span>Cotizar</span>
+        <i class="ph-bold ph-arrow-down text-white"></i>
       </a>
     </div>
   </header>
 
-  <section class="max-w-md mx-auto px-4 pt-8 pb-6 text-center">
-    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-cuban text-brand-gold text-[11px] font-semibold tracking-wide uppercase mb-3">
-      <i class="ph-bold ph-sparkle text-sm"></i> Tarifas Claras • Mobile First
+  <section class="max-w-md mx-auto px-4 pt-6 pb-4 text-center">
+    <!-- Red Badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full gradient-hero-badge text-[11px] font-bold text-red-200 mb-3 tracking-wide uppercase">
+      <span class="w-2 h-2 rounded-full bg-[#dc2626] animate-pulse"></span>
+      Planes & Producción
     </div>
-    
-    <h1 class="text-3xl font-extrabold tracking-tight text-white leading-tight mb-3">
-      Contenido que <span class="bg-gradient-to-r from-brand-gold via-amber-300 to-brand-coral bg-clip-text text-transparent">vende</span> y conecta de verdad.
+
+    <!-- Main Title -->
+    <h1 class="text-2xl font-black text-white leading-tight mb-2">
+      Servicios de contenido estratégico para tu empresa
     </h1>
-    
-    <p class="text-sm text-slate-400 leading-relaxed max-w-xs mx-auto mb-6">
-      Tres soluciones adaptadas a tu negocio: gestión mensual, spots cinematográficos con alma y automatización con IA.
+
+    <p class="text-xs text-[#a3a3a3] leading-relaxed max-w-xs mx-auto mb-5">
+      Tres soluciones enfocadas en presencia digital, narrativa audiovisual e innovación con inteligencia artificial.
     </p>
 
-    <!-- Micro Credibility Indicators -->
-    <div class="grid grid-cols-3 gap-2 text-center pt-2 pb-1">
-      <div class="p-2.5 rounded-xl bg-brand-surface border border-brand-border/60">
-        <i class="ph ph-lightning text-brand-amber text-lg"></i>
-        <div class="text-[11px] font-bold text-white mt-0.5">Ágil</div>
-        <div class="text-[9px] text-slate-400">Entregas semanales</div>
-      </div>
-      <div class="p-2.5 rounded-xl bg-brand-surface border border-brand-border/60">
-        <i class="ph ph-film-strip text-brand-coral text-lg"></i>
-        <div class="text-[11px] font-bold text-white mt-0.5">Cine & Redes</div>
-        <div class="text-[9px] text-slate-400">Alma cubana</div>
-      </div>
-      <div class="p-2.5 rounded-xl bg-brand-surface border border-brand-border/60">
-        <i class="ph ph-cpu text-brand-emerald text-lg"></i>
-        <div class="text-[11px] font-bold text-white mt-0.5">IA Real</div>
-        <div class="text-[9px] text-slate-400">Avatares consistentes</div>
-      </div>
+    <!-- Quick Access buttons for Mobile -->
+    <div class="grid grid-cols-3 gap-2 text-left">
+      <a href="#servicio-1" class="p-2.5 rounded-xl bg-[#0e0e0e] border border-red-950 active:border-[#b50000] transition block">
+        <span class="text-[9px] uppercase font-bold text-red-500 block leading-tight">Mensual</span>
+        <span class="text-[11px] font-bold text-white block mt-0.5 leading-tight">Servicios Nacionales</span>
+      </a>
+
+      <a href="#servicio-2" class="p-2.5 rounded-xl bg-[#140608] border border-[#dc2626]/70 shadow-[0_0_10px_rgba(181,0,0,0.3)] transition block">
+        <span class="text-[9px] uppercase font-bold text-red-400 block leading-tight">Narrativa</span>
+        <span class="text-[11px] font-bold text-white block mt-0.5 leading-tight">Spot Cubano</span>
+      </a>
+
+      <a href="#servicio-3" class="p-2.5 rounded-xl bg-[#0e0e0e] border border-red-950 active:border-[#b50000] transition block">
+        <span class="text-[9px] uppercase font-bold text-red-500 block leading-tight">Innovación</span>
+        <span class="text-[11px] font-bold text-white block mt-0.5 leading-tight">Cocodrilo AI</span>
+      </a>
     </div>
   </section>
 
-  <section class="max-w-md mx-auto px-4 mb-4">
-    <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
-      <button onclick="filterPlan('all')" id="btn-tab-all" class="tab-btn px-3 py-1.5 rounded-full text-xs font-medium bg-brand-amber text-black transition">
-        Todos (3)
+  <main class="max-w-md mx-auto px-4 space-y-6 mt-2">
+
+    <!-- SERVICIO 1 -->
+    <article id="servicio-1" class="gradient-card rounded-2xl p-5 border-red-accent relative">
+      <div class="flex items-start justify-between gap-3 mb-2">
+        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-red-950/70 border border-red-900 text-red-300">
+          Servicio 01
+        </span>
+        <div class="text-right">
+          <div class="text-xl font-bold text-white leading-none">75- $350</div>
+          <span class="text-[10px] text-[#a3a3a3] font-normal">/ mes</span>
+        </div>
+      </div>
+
+      <h2 class="text-base font-bold text-white leading-snug">
+        Servicios nacionales o con productos físicos
+      </h2>
+      <p class="text-xs text-[#d4d4d4] mt-1.5 mb-4 leading-relaxed">
+        Para empresas que quieren convertir el contenido en una parte permanente de su comunicación.
+      </p>
+
+      <div class="border-t border-[#260a0c] pt-3.5">
+        <span class="text-[10px] uppercase font-bold text-red-400 tracking-wider block mb-2">Incluye:</span>
+        <div class="grid grid-cols-2 gap-2 text-xs text-[#e5e5e5]">
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Reels</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Diseños para redes</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Carruseles</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Reels con AI</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Guionización</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Edición profesional</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Diseño</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Conceptualización</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Dirección creativa</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Estrategias</span></div>
+        </div>
+      </div>
+
+      <button 
+        onclick="seleccionarServicio('Servicios nacionales o con productos físicos', '75- $350 / mes')"
+        class="w-full mt-4 py-3 px-4 rounded-xl bg-[#1b1b1b] border border-red-900/80 active:bg-[#b50000] text-white font-bold text-xs flex items-center justify-center gap-2 transition active:scale-[0.98]">
+        <span>Solicitar este plan</span>
+        <i class="ph-bold ph-arrow-down-right text-red-400"></i>
       </button>
-      <button onclick="filterPlan('plan1')" id="btn-tab-plan1" class="tab-btn px-3 py-1.5 rounded-full text-xs font-medium bg-brand-surface border border-brand-border text-slate-300 transition">
-        Mensual Social
+    </article>
+
+    <!-- SERVICIO 2 (Destacado Cinematográfico) -->
+    <article id="servicio-2" class="rounded-2xl p-5 bg-gradient-to-b from-[#170507] via-[#100406] to-[#080808] border-red-featured red-glow-card relative">
+      <div class="flex items-start justify-between gap-3 mb-2">
+        <span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#dc2626] text-white">
+          <i class="ph-bold ph-film-strip"></i> Obra Narrativa
+        </span>
+        <div class="text-right">
+          <div class="text-xl font-bold text-white leading-none">150- $500</div>
+          <span class="text-[10px] text-red-300 font-normal">por producción</span>
+        </div>
+      </div>
+
+      <h2 class="text-lg font-black text-white leading-snug mt-1">
+        Spot con alma cubana
+      </h2>
+      <p class="text-xs text-red-300 font-semibold mt-0.5">
+        Historias pensadas para tu empresa.
+      </p>
+      <p class="text-xs text-[#e5e5e5] mt-1 leading-relaxed">
+        Cuatro producciones narrativas pensadas para que la empresa forme parte de la historia.
+      </p>
+
+      <!-- Duración -->
+      <div class="mt-3 inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-black/80 border border-red-900 text-xs font-semibold text-white">
+        <i class="ph-bold ph-clock text-[#dc2626]"></i>
+        <span>Duración: <strong class="text-white">hasta 2 minutos.</strong></span>
+      </div>
+
+      <div class="border-t border-[#3d0d10] mt-3.5 pt-3.5">
+        <span class="text-[10px] uppercase font-bold text-red-400 tracking-wider block mb-2">Producción Integral:</span>
+        <div class="grid grid-cols-2 gap-2 text-xs text-[#f5f5f5]">
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Idea original</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Desarrollo narrativo</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Guion</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Preproducción</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Dirección</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Producción audiovisual</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Locaciones</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Edición profesional</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Color</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Diseño sonoro</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Motion graphics</span></div>
+          <div class="flex items-center gap-1.5"><span class="text-[#dc2626] font-bold">✓</span> <span>Adaptación para redes</span></div>
+        </div>
+      </div>
+
+      <button 
+        onclick="seleccionarServicio('Spot con alma cubana', '150- $500')"
+        class="w-full mt-4 py-3.5 px-4 rounded-xl bg-[#dc2626] active:bg-[#b50000] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 red-glow-button active:scale-[0.98] transition">
+        <span>Cotizar Spot con alma cubana</span>
+        <i class="ph-bold ph-arrow-down-right"></i>
       </button>
-      <button onclick="filterPlan('plan2')" id="btn-tab-plan2" class="tab-btn px-3 py-1.5 rounded-full text-xs font-medium bg-brand-surface border border-brand-border text-slate-300 transition">
-        Spot Narrativo
-      </button>
-      <button onclick="filterPlan('plan3')" id="btn-tab-plan3" class="tab-btn px-3 py-1.5 rounded-full text-xs font-medium bg-brand-surface border border-brand-border text-slate-300 transition">
+    </article>
+
+    <!-- SERVICIO 3 -->
+    <article id="servicio-3" class="gradient-card rounded-2xl p-5 border-red-accent relative">
+      <div class="flex items-start justify-between gap-3 mb-2">
+        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-red-950/70 border border-red-900 text-red-300">
+          Servicio 03
+        </span>
+        <div class="text-right">
+          <div class="text-xl font-bold text-white leading-none">$100- 300</div>
+          <span class="text-[10px] text-[#a3a3a3] font-normal">/ mes</span>
+        </div>
+      </div>
+
+      <h2 class="text-base font-bold text-white leading-snug">
         Cocodrilo AI
-      </button>
-    </div>
-  </section>
-
-  <main id="planes" class="max-w-md mx-auto px-4 space-y-5">
-
-    <!-- PLAN 1: Servicios Nacionales o Productos Físicos -->
-    <article id="card-plan1" class="service-card glass-card rounded-2xl p-5 border border-brand-border hover:border-slate-500/50 transition-all duration-200">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <span class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full badge-prod text-blue-300">
-          <i class="ph-fill ph-storefront"></i> Mensual Continuo
-        </span>
-        <div class="text-right">
-          <div class="text-xl font-extrabold text-white leading-tight">$75 - $350</div>
-          <div class="text-[10px] text-slate-400 font-medium">USD / mes según volumen</div>
-        </div>
-      </div>
-
-      <h2 class="text-lg font-bold text-white mt-1">Servicios Nacionales o Productos Físicos</h2>
-      <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed">
-        Para empresas que quieren convertir el contenido en una parte permanente de su comunicación comercial y ventas.
+      </h2>
+      <p class="text-xs text-[#d4d4d4] mt-1.5 mb-4 leading-relaxed">
+        Para empresas que quieren utilizar la inteligencia artificial como una herramienta permanente de comunicación.
       </p>
 
-      <div class="border-t border-brand-border/60 pt-3">
-        <h3 class="text-[11px] uppercase tracking-wider text-slate-400 font-bold mb-2">¿Qué incluye?</h3>
-        <div class="grid grid-cols-2 gap-2 text-xs">
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-blue-400"></i> Reels de alto impacto</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-blue-400"></i> Diseños para redes</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-blue-400"></i> Carruseles educativos</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-blue-400"></i> Reels generados con AI</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-blue-400"></i> Guionización estratégica</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-blue-400"></i> Edición profesional</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-blue-400"></i> Conceptualización</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-blue-400"></i> Dirección creativa</div>
+      <div class="border-t border-[#260a0c] pt-3.5">
+        <span class="text-[10px] uppercase font-bold text-red-400 tracking-wider block mb-2">Capacidades de IA:</span>
+        <div class="grid grid-cols-1 gap-2 text-xs text-[#e5e5e5]">
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Videos AI</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Personaje digital consistente</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Guiones personalizados</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Contenido informativo y educativo</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Edición profesional</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Motion graphics</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Integración de identidad visual</span></div>
+          <div class="flex items-center gap-1.5"><i class="ph-bold ph-check text-[#dc2626]"></i> <span>Adaptaciones para redes</span></div>
         </div>
       </div>
 
-      <button onclick="preselectPlan('Servicios Nacionales ($75 - $350/mes)')" class="w-full mt-4 py-2.5 px-4 bg-brand-surface hover:bg-brand-border text-white text-xs font-semibold rounded-xl border border-brand-border/80 flex items-center justify-center gap-2 transition active:scale-[0.98]">
-        <span>Cotizar este plan</span>
-        <i class="ph-bold ph-arrow-down"></i>
-      </button>
-    </article>
-
-    <!-- PLAN 2: Spot con Alma Cubana (Destacado) -->
-    <article id="card-plan2" class="service-card relative rounded-2xl p-5 bg-gradient-to-b from-[#211a14] via-[#1a1c24] to-[#12161f] border-2 border-brand-amber/80 shadow-xl shadow-amber-950/20">
-      <div class="absolute -top-3 left-4 bg-gradient-to-r from-brand-amber to-brand-coral text-black font-extrabold text-[10px] uppercase tracking-widest px-3 py-0.5 rounded-full shadow">
-        ★ Producto Cinematográfico
-      </div>
-
-      <div class="flex items-start justify-between gap-2 mb-2 mt-1">
-        <span class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full badge-cuban text-brand-gold">
-          <i class="ph-fill ph-film-strip"></i> Narrativa & Emoción
-        </span>
-        <div class="text-right">
-          <div class="text-xl font-black text-brand-gold leading-tight">$150 - $500</div>
-          <div class="text-[10px] text-slate-400 font-medium">Por producción</div>
-        </div>
-      </div>
-
-      <h2 class="text-lg font-bold text-white mt-1">Spot con Alma Cubana</h2>
-      <p class="text-xs text-amber-200/90 font-medium mt-0.5">Historias pensadas para tu empresa.</p>
-      <p class="text-xs text-slate-300 mt-1 mb-3 leading-relaxed">
-        Cuatro producciones narrativas pensadas para que la empresa forme parte orgánica de la historia, conectando con autenticidad y raíces.
-      </p>
-
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-black/40 border border-brand-amber/30 text-amber-300 text-xs font-semibold mb-3">
-        <i class="ph-bold ph-clock"></i> Duración: hasta 2 minutos
-      </div>
-
-      <div class="border-t border-brand-border/80 pt-3">
-        <h3 class="text-[11px] uppercase tracking-wider text-amber-300 font-bold mb-2">Producción Integral Completa:</h3>
-        <ul class="space-y-1.5 text-xs text-slate-200">
-          <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-amber"></i> Idea original & Desarrollo narrativo</li>
-          <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-amber"></i> Guion técnico, Preproducción & Dirección</li>
-          <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-amber"></i> Producción audiovisual en locaciones reales</li>
-          <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-amber"></i> Edición profesional, Color & Diseño sonoro</li>
-          <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-amber"></i> Motion graphics & Adaptación para redes</li>
-        </ul>
-      </div>
-
-      <button onclick="preselectPlan('Spot con Alma Cubana ($150 - $500)')" class="w-full mt-4 py-2.5 px-4 bg-gradient-to-r from-brand-amber to-brand-coral hover:opacity-95 text-black text-xs font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 active:scale-[0.98] transition">
-        <span>Quiero un Spot Narrativo</span>
-        <i class="ph-bold ph-arrow-down"></i>
-      </button>
-    </article>
-
-    <!-- PLAN 3: Cocodrilo AI -->
-    <article id="card-plan3" class="service-card glass-card rounded-2xl p-5 border border-brand-border hover:border-emerald-500/50 transition-all duration-200">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <span class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full badge-ai text-emerald-300">
-          <i class="ph-fill ph-robot"></i> Inteligencia Artificial
-        </span>
-        <div class="text-right">
-          <div class="text-xl font-extrabold text-white leading-tight">$100 - $300</div>
-          <div class="text-[10px] text-slate-400 font-medium">USD / mes</div>
-        </div>
-      </div>
-
-      <h2 class="text-lg font-bold text-white mt-1">Cocodrilo AI</h2>
-      <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed">
-        Para empresas que quieren utilizar la inteligencia artificial como una herramienta permanente de comunicación ágil, moderna y automatizada.
-      </p>
-
-      <div class="border-t border-brand-border/60 pt-3">
-        <h3 class="text-[11px] uppercase tracking-wider text-slate-400 font-bold mb-2">Capacidades & Entregables:</h3>
-        <div class="grid grid-cols-2 gap-2 text-xs">
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-emerald-400"></i> Videos AI</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-emerald-400"></i> Personaje digital consistente</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-emerald-400"></i> Guiones personalizados</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-emerald-400"></i> Contenido formativo</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-emerald-400"></i> Edición profesional</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-emerald-400"></i> Motion graphics</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-emerald-400"></i> Identidad de marca</div>
-          <div class="flex items-center gap-1.5 text-slate-200"><i class="ph-bold ph-check text-emerald-400"></i> Adaptación redes</div>
-        </div>
-      </div>
-
-      <button onclick="preselectPlan('Cocodrilo AI ($100 - $300/mes)')" class="w-full mt-4 py-2.5 px-4 bg-brand-surface hover:bg-brand-border text-white text-xs font-semibold rounded-xl border border-brand-border/80 flex items-center justify-center gap-2 transition active:scale-[0.98]">
-        <span>Cotizar Cocodrilo AI</span>
-        <i class="ph-bold ph-arrow-down"></i>
+      <button 
+        onclick="seleccionarServicio('Cocodrilo AI', '$100- 300 / mes')"
+        class="w-full mt-4 py-3 px-4 rounded-xl bg-[#1b1b1b] border border-red-900/80 active:bg-[#b50000] text-white font-bold text-xs flex items-center justify-center gap-2 transition active:scale-[0.98]">
+        <span>Solicitar Cocodrilo AI</span>
+        <i class="ph-bold ph-arrow-down-right text-red-400"></i>
       </button>
     </article>
 
   </main>
 
-  <section id="cotizador" class="max-w-md mx-auto px-4 mt-10">
-    <div class="glass-card rounded-2xl p-5 border border-brand-border relative overflow-hidden">
-      <div class="flex items-center gap-2 mb-2">
-        <div class="w-6 h-6 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-          <i class="ph-bold ph-whatsapp-logo text-base"></i>
+  <section id="cotizador" class="max-w-md mx-auto px-4 mt-8">
+    <div class="bg-[#0e0708] border border-[#7f0000] rounded-2xl p-5 relative shadow-[0_0_20px_rgba(181,0,0,0.2)]">
+      
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-9 h-9 rounded-xl bg-[#b50000] flex items-center justify-center text-white shrink-0">
+          <i class="ph-bold ph-whatsapp-logo text-xl"></i>
         </div>
-        <h3 class="text-sm font-bold text-white">Cotizador Rápido a WhatsApp</h3>
-      </div>
-      <p class="text-xs text-slate-400 mb-4">
-        Personaliza tu solicitud y genera el mensaje listo para enviar en un toque.
-      </p>
-
-      <!-- Form controls -->
-      <div class="space-y-3">
         <div>
-          <label class="block text-[11px] font-semibold text-slate-300 mb-1">1. Selecciona el servicio:</label>
-          <select id="calc-service" class="w-full bg-brand-surface border border-brand-border text-slate-100 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-brand-amber">
-            <option value="Servicios Nacionales ($75 - $350/mes)">Servicios Nacionales o Físicos ($75 - $350/mes)</option>
-            <option value="Spot con Alma Cubana ($150 - $500)" selected>Spot con Alma Cubana ($150 - $500)</option>
-            <option value="Cocodrilo AI ($100 - $300/mes)">Cocodrilo AI ($100 - $300/mes)</option>
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider">Contactar con Isla Cocodrilo</h3>
+          <p class="text-[11px] text-red-300">Respuesta rápida por WhatsApp</p>
+        </div>
+      </div>
+
+      <form onsubmit="enviarMensajeWhatsApp(event)" class="space-y-3.5 mt-4">
+        <!-- Selector -->
+        <div>
+          <label for="servicio-select" class="block text-[11px] font-bold text-[#e5e5e5] mb-1">
+            Servicio a cotizar:
+          </label>
+          <select 
+            id="servicio-select" 
+            class="w-full bg-[#050505] border border-red-950 text-white text-xs rounded-xl px-3 py-3 focus:outline-none focus:border-[#dc2626]">
+            <option value="Servicios nacionales o con productos físicos (75- $350 / mes)">
+              Servicios nacionales o con productos físicos (75- $350 / mes)
+            </option>
+            <option value="Spot con alma cubana (150- $500)" selected>
+              Spot con alma cubana (150- $500)
+            </option>
+            <option value="Cocodrilo AI ($100- 300 / mes)">
+              Cocodrilo AI ($100- 300 / mes)
+            </option>
           </select>
         </div>
 
+        <!-- Nombre de Empresa -->
         <div>
-          <label class="block text-[11px] font-semibold text-slate-300 mb-1">2. Nivel / Enfoque requerido:</label>
-          <select id="calc-tier" class="w-full bg-brand-surface border border-brand-border text-slate-100 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-brand-amber">
-            <option value="Básico / Arranque rápido">Básico / Arranque rápido</option>
-            <option value="Estándar / Crecimiento constante" selected>Estándar / Crecimiento constante</option>
-            <option value="Avanzado / Máxima frecuencia & producción">Avanzado / Máxima frecuencia & producción</option>
-          </select>
+          <label for="empresa-input" class="block text-[11px] font-bold text-[#e5e5e5] mb-1">
+            Nombre de la empresa o marca:
+          </label>
+          <input 
+            type="text" 
+            id="empresa-input" 
+            placeholder="Ej: Mi Negocio / Proyecto" 
+            required
+            class="w-full bg-[#050505] border border-red-950 text-white text-xs rounded-xl px-3 py-3 placeholder:text-zinc-600 focus:outline-none focus:border-[#dc2626]"
+          />
         </div>
 
+        <!-- Mensaje adicional -->
         <div>
-          <label class="block text-[11px] font-semibold text-slate-300 mb-1">3. Nombre de tu negocio o marca:</label>
-          <input type="text" id="calc-business" placeholder="Ej: Café Habana / Tienda Online" class="w-full bg-brand-surface border border-brand-border text-slate-100 text-xs rounded-xl px-3 py-2.5 placeholder-slate-500 focus:outline-none focus:border-brand-amber">
+          <label for="nota-input" class="block text-[11px] font-bold text-[#e5e5e5] mb-1">
+            Detalles adicionales (opcional):
+          </label>
+          <input 
+            type="text" 
+            id="nota-input" 
+            placeholder="Ej: Requerimos empezar este mes" 
+            class="w-full bg-[#050505] border border-red-950 text-white text-xs rounded-xl px-3 py-3 placeholder:text-zinc-600 focus:outline-none focus:border-[#dc2626]"
+          />
         </div>
 
-        <div class="pt-2">
-          <button onclick="sendToWhatsApp()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-black font-extrabold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 active:scale-[0.98] transition">
-            <i class="ph-bold ph-whatsapp-logo text-base"></i>
-            <span>Consultar por WhatsApp con estos datos</span>
-          </button>
-        </div>
-      </div>
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="w-full py-3.5 px-4 rounded-xl bg-[#dc2626] active:bg-[#b50000] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 red-glow-button active:scale-[0.98] transition">
+          <i class="ph-bold ph-paper-plane-tilt text-sm"></i>
+          <span>Enviar consulta por WhatsApp</span>
+        </button>
+      </form>
+
     </div>
   </section>
 
-  <section class="max-w-md mx-auto px-4 mt-10">
-    <h3 class="text-base font-bold text-white mb-3 text-center">Preguntas Frecuentes</h3>
-    
-    <div class="space-y-2 text-xs">
-      <div class="glass-card rounded-xl border border-brand-border/70 overflow-hidden">
-        <button onclick="toggleFaq(1)" class="w-full p-3.5 text-left font-semibold text-slate-200 flex items-center justify-between">
-          <span>¿Cómo se entrega el material?</span>
-          <i id="faq-icon-1" class="ph-bold ph-caret-down text-slate-400 transition-transform"></i>
-        </button>
-        <div id="faq-ans-1" class="hidden px-3.5 pb-3.5 text-slate-400 leading-relaxed border-t border-brand-border/40 pt-2">
-          Entregamos carpetas organizadas en la nube (Google Drive o Frame.io) con los archivos optimizados en formato vertical (9:16) listos para Reels/TikTok y versiones horizontales o cuadradas si el paquete lo contempla.
-        </div>
-      </div>
-
-      <div class="glass-card rounded-xl border border-brand-border/70 overflow-hidden">
-        <button onclick="toggleFaq(2)" class="w-full p-3.5 text-left font-semibold text-slate-200 flex items-center justify-between">
-          <span>¿Cuál es el tiempo de producción del Spot con Alma Cubana?</span>
-          <i id="faq-icon-2" class="ph-bold ph-caret-down text-slate-400 transition-transform"></i>
-        </button>
-        <div id="faq-ans-2" class="hidden px-3.5 pb-3.5 text-slate-400 leading-relaxed border-t border-brand-border/40 pt-2">
-          Desde el guion hasta el corte final con color y diseño sonoro suele tomar entre 7 y 14 días laborables, asegurando que cada detalle narrativo refleje la esencia de tu empresa.
-        </div>
-      </div>
-
-      <div class="glass-card rounded-xl border border-brand-border/70 overflow-hidden">
-        <button onclick="toggleFaq(3)" class="w-full p-3.5 text-left font-semibold text-slate-200 flex items-center justify-between">
-          <span>¿Cómo funciona el personaje consistente en Cocodrilo AI?</span>
-          <i id="faq-icon-3" class="ph-bold ph-caret-down text-slate-400 transition-transform"></i>
-        </button>
-        <div id="faq-ans-3" class="hidden px-3.5 pb-3.5 text-slate-400 leading-relaxed border-t border-brand-border/40 pt-2">
-          Entrenamos modelos visuales y de voz para que tu vocero digital mantenga el mismo rostro, tono y estilo de marca en todos los videos, sin requerir sesiones de grabación presenciales constantes.
-        </div>
-      </div>
+  <footer class="max-w-md mx-auto px-4 mt-10 text-center text-xs text-[#a3a3a3]">
+    <div class="flex justify-center items-center gap-2 mb-2">
+      <img 
+        src="https://res.cloudinary.com/ejcymysf/image/upload/f_auto,q_auto/LOGO_actual_isla_cocodrilo" 
+        alt="Isla Cocodrilo" 
+        class="w-6 h-6 object-contain rounded-full"
+      />
+      <span class="font-bold text-white tracking-widest text-xs uppercase">Isla Cocodrilo</span>
     </div>
-  </section>
+    <p class="text-[11px] text-[#737373]">Contenido audiovisual, historias e inteligencia artificial.</p>
+  </footer>
 
-  <div class="fixed bottom-0 left-0 right-0 z-50 bg-brand-carbon/95 backdrop-blur-lg border-t border-brand-border/80 px-4 py-2.5">
+  <aside class="fixed bottom-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-md border-t border-[#260a0c] px-4 py-2.5">
     <div class="max-w-md mx-auto flex items-center justify-between gap-3">
-      <div>
-        <div class="text-[10px] text-slate-400 font-medium">Asesoría inmediata</div>
-        <div class="text-xs font-bold text-white">¿Dudas con tu plan ideal?</div>
+      <div class="flex flex-col">
+        <span class="text-[10px] text-red-500 font-bold uppercase tracking-wider leading-tight">Isla Cocodrilo</span>
+        <span class="text-xs font-bold text-white leading-tight">¿Listo para comenzar?</span>
       </div>
-      <a href="https://wa.me/?text=Hola%2C%20quisiera%20asesor%C3%ADa%20para%20elegir%20entre%20los%203%20servicios%20de%20contenido." target="_blank" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-amber to-brand-coral text-black font-extrabold text-xs flex items-center gap-1.5 shadow-md active:scale-95 transition">
-        <i class="ph-bold ph-chat-circle text-sm"></i>
-        <span>Hablar por WhatsApp</span>
-      </a>
+      <button 
+        onclick="irACotizador()" 
+        class="px-4 py-2 rounded-xl bg-[#dc2626] text-white font-bold text-xs flex items-center gap-1.5 shadow-[0_0_12px_rgba(220,38,38,0.5)] active:scale-95 transition">
+        <i class="ph-bold ph-whatsapp-logo text-sm"></i>
+        <span>Contactar</span>
+      </button>
     </div>
-  </div>
+  </aside>
 
   <script>
-    // Tab Filter Logic
-    function filterPlan(planId) {
-      const cards = {
-        plan1: document.getElementById('card-plan1'),
-        plan2: document.getElementById('card-plan2'),
-        plan3: document.getElementById('card-plan3')
-      };
+    function seleccionarServicio(nombre, precio) {
+      const select = document.getElementById('servicio-select');
+      const opcionBuscada = `${nombre} (${precio})`;
       
-      const buttons = {
-        all: document.getElementById('btn-tab-all'),
-        plan1: document.getElementById('btn-tab-plan1'),
-        plan2: document.getElementById('btn-tab-plan2'),
-        plan3: document.getElementById('btn-tab-plan3')
-      };
-
-      // Reset button styles
-      Object.values(buttons).forEach(btn => {
-        btn.className = "tab-btn px-3 py-1.5 rounded-full text-xs font-medium bg-brand-surface border border-brand-border text-slate-300 transition";
-      });
-
-      // Highlight active button
-      if (buttons[planId]) {
-        buttons[planId].className = "tab-btn px-3 py-1.5 rounded-full text-xs font-medium bg-brand-amber text-black font-bold transition";
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].text.includes(nombre)) {
+          select.selectedIndex = i;
+          break;
+        }
       }
 
-      // Show / hide cards
-      if (planId === 'all') {
-        Object.values(cards).forEach(card => card.classList.remove('hidden'));
-      } else {
-        Object.keys(cards).forEach(key => {
-          if (key === planId) {
-            cards[key].classList.remove('hidden');
-          } else {
-            cards[key].classList.add('hidden');
-          }
-        });
+      document.getElementById('cotizador').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function irACotizador() {
+      document.getElementById('cotizador').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function enviarMensajeWhatsApp(e) {
+      e.preventDefault();
+
+      const servicio = document.getElementById('servicio-select').value;
+      const empresa = document.getElementById('empresa-input').value.trim();
+      const nota = document.getElementById('nota-input').value.trim();
+
+      let texto = `¡Hola Isla Cocodrilo! Quiero información y cotización sobre sus servicios:%0A%0A` +
+                  `🐊 *Servicio:* ${encodeURIComponent(servicio)}%0A` +
+                  `🏢 *Empresa:* ${encodeURIComponent(empresa)}%0A`;
+
+      if (nota) {
+        texto += `📝 *Detalles:* ${encodeURIComponent(nota)}%0A`;
       }
-    }
 
-    // Preselect plan in calculator and scroll down
-    function preselectPlan(serviceName) {
-      const select = document.getElementById('calc-service');
-      select.value = serviceName;
-      
-      const cotizador = document.getElementById('cotizador');
-      cotizador.scrollIntoView({ behavior: 'smooth' });
-    }
+      texto += `%0A¿Cuándo podemos coordinar los detalles?`;
 
-    // WhatsApp Message Composer
-    function sendToWhatsApp() {
-      const service = document.getElementById('calc-service').value;
-      const tier = document.getElementById('calc-tier').value;
-      const business = document.getElementById('calc-business').value.trim() || 'Mi Empresa';
-
-      const text = `¡Hola! Me interesa cotizar un servicio creativo:%0A%0A` +
-                   `📌 *Servicio:* ${encodeURIComponent(service)}%0A` +
-                   `⚡ *Nivel:* ${encodeURIComponent(tier)}%0A` +
-                   `🏢 *Negocio / Marca:* ${encodeURIComponent(business)}%0A%0A` +
-                   `¿Podemos coordinar detalles y disponibilidad?`;
-
-      // Opens WhatsApp (replace phone parameter with your agency WhatsApp number if desired, e.g. https://wa.me/1234567890?text=...)
-      window.open(`https://wa.me/?text=${text}`, '_blank');
-    }
-
-    // FAQ Accordion toggle
-    function toggleFaq(num) {
-      const ans = document.getElementById(`faq-ans-${num}`);
-      const icon = document.getElementById(`faq-icon-${num}`);
-      
-      const isOpen = !ans.classList.contains('hidden');
-      if (isOpen) {
-        ans.classList.add('hidden');
-        icon.classList.remove('rotate-180');
-      } else {
-        ans.classList.remove('hidden');
-        icon.classList.add('rotate-180');
-      }
+      // Redirect to WhatsApp
+      window.open(`https://wa.me/?text=${texto}`, '_blank');
     }
   </script>
 </body>
