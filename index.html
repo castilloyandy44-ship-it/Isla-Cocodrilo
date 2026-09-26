@@ -40,7 +40,7 @@
     /* Strict font family and WhatsApp-inspired comfortable reading scale */
     html, body {
       font-family: Arial, Helvetica, sans-serif !important;
-      font-size: 16px; /* Standard comfortable base reading size */
+      font-size: 16px;
       line-height: 1.6;
       background-color: #050505;
       color: #ffffff;
@@ -131,7 +131,7 @@
     </h1>
 
     <p class="text-base text-[#cfcfcf] leading-relaxed max-w-sm mx-auto mb-6">
- Presencia digital continua, narrativa audiovisual e innovación con inteligencia artificial.
+      Presencia digital continua, narrativa audiovisual e innovación con inteligencia artificial.
     </p>
 
     <!-- Quick navigation tabs -->
@@ -172,7 +172,7 @@
         Servicios nacionales o con productos físicos
       </h2>
       <p class="text-base text-[#d8d8d8] mt-2 mb-4 leading-relaxed">
-       Trabajamos de forma presencial, con productos que nos puedan hacer llegar, o servicios.
+        Trabajamos de forma presencial, con productos que nos puedan hacer llegar, o servicios.
       </p>
 
       <div class="border-t border-[#2d0a0d] pt-4">
@@ -306,7 +306,7 @@
         </div>
         <div>
           <h3 class="font-bold text-white uppercase tracking-wider">Contactar con Isla Cocodrilo</h3>
-          <p class="text-sm text-red-300">Respuesta ágil y directa a tu WhatsApp</p>
+          <p class="text-sm text-red-300">WhatsApp: +53 52044651</p>
         </div>
       </div>
 
@@ -362,7 +362,7 @@
         <button 
           type="submit" 
           class="w-full py-4 px-4 rounded-xl bg-[#dc2626] active:bg-[#b50000] text-white font-bold text-base uppercase tracking-wider flex items-center justify-center gap-2 red-glow-button active:scale-[0.98] transition">
-          <i class="ph-bold ph-paper-plane-tilt text-xl"></i>
+          <i class="ph-bold ph-whatsapp-logo text-xl"></i>
           <span>Enviar mensaje a WhatsApp</span>
         </button>
       </form>
@@ -390,16 +390,19 @@
         <span class="text-xs text-red-500 font-bold uppercase tracking-wider leading-tight">Isla Cocodrilo</span>
         <span class="text-sm font-bold text-white leading-tight">Hablemos de tu proyecto</span>
       </div>
-      <button 
-        onclick="irACotizador()" 
+      <a 
+        href="https://wa.me/5352044651?text=%C2%A1Hola%20Isla%20Cocodrilo!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios" 
+        target="_blank"
         class="px-4 py-2.5 rounded-xl bg-[#dc2626] text-white font-bold text-sm flex items-center gap-2 shadow-[0_0_15px_rgba(220,38,38,0.55)] active:scale-95 transition">
         <i class="ph-bold ph-whatsapp-logo text-lg"></i>
         <span>WhatsApp</span>
-      </button>
+      </a>
     </div>
   </aside>
 
   <script>
+    const MI_WHATSAPP = "5352044651";
+
     function seleccionarServicio(nombre, precio) {
       const select = document.getElementById('servicio-select');
       
@@ -413,10 +416,6 @@
       document.getElementById('cotizador').scrollIntoView({ behavior: 'smooth' });
     }
 
-    function irACotizador() {
-      document.getElementById('cotizador').scrollIntoView({ behavior: 'smooth' });
-    }
-
     function enviarMensajeWhatsApp(e) {
       e.preventDefault();
 
@@ -424,18 +423,19 @@
       const empresa = document.getElementById('empresa-input').value.trim();
       const nota = document.getElementById('nota-input').value.trim();
 
-      let texto = `¡Hola Isla Cocodrilo! Quiero información y cotización sobre sus servicios:%0A%0A` +
-                  `🐊 *Servicio:* ${encodeURIComponent(servicio)}%0A` +
-                  `🏢 *Empresa:* ${encodeURIComponent(empresa)}%0A`;
+      let texto = `¡Hola Isla Cocodrilo! Quiero información y cotización sobre sus servicios:\n\n` +
+                  `🐊 *Servicio:* ${servicio}\n` +
+                  `🏢 *Empresa:* ${empresa}\n`;
 
       if (nota) {
-        texto += `📝 *Detalles:* ${encodeURIComponent(nota)}%0A`;
+        texto += `📝 *Detalles:* ${nota}\n`;
       }
 
-      texto += `%0A¿Cuándo podemos coordinar los detalles?`;
+      texto += `\n¿Cuándo podemos coordinar los detalles?`;
 
-      // Redirect directly to WhatsApp with pre-filled message
-      window.open(`https://wa.me/?text=${texto}`, '_blank');
+      // Redirigir directamente al número +53 52044651 con el mensaje formateado
+      const url = `https://wa.me/${MI_WHATSAPP}?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
     }
   </script>
 </body>
